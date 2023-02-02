@@ -95,8 +95,8 @@ Page Appears showing all the logs been ingested and  indexed into Splunk Instanc
 <br />
 <br />
 
-Watch the Video Tutorial for further Analysis of the Logs<br/>
-
+Watch this Video Tutorial for further Analysis of the Logs<br/>
+[Video Demonstration](https://youtu.be/7eJexJVCqJo)
 </p>
 
 <!--
