@@ -2,7 +2,7 @@
 - [Collecting,Ingesting and Analyzing VPNlogs]
 
 <h2>Description</h2>
-In this lab we will cover basics of Splunk, the leading SIEM solution for collecting,Analyzing and Correlating machines and network logs in real-time.We will install,go through the various components of splunk and its functionality, and then ingest vpnlogs into splunk instance and try to analyze the logs. 
+In this lab we will cover basics of Splunk, the leading SIEM solution for collecting,Analyzing and Correlating machines and network logs in real-time.We will install,navigate and go through the various components of splunk and its functionality, and then ingest vpnlogs into splunk instance and try to analyze the logs. 
 <br />
 
 <h2>Tool Used</h2>
@@ -17,112 +17,86 @@ In this lab we will cover basics of Splunk, the leading SIEM solution for collec
 <h2>Lab walk-through:</h2>
 
 <p align="center">
-Installing Splunk Enterprise on Windows 11 Host: Check to accept License Agreement and Click Next<br/>
-<img src="https://imgur.com/9De1u6V.png" height="80%" width="80%"/>
+Installing Splunk Enterprise on Windows 11 Host: Check the box to accept License Agreement and Click Next<br/>
+<img src="https://imgur.com/lhxJcE0.png" height="80%" width="80%"/>
 <br />
 <br />
 Create an Admin Account and Click Next<br/>
-<img src="https://imgur.com/PfJWmAY.png" height="80%" width="80%" />
+<img src="https://imgur.com/wCXTRQC.png" height="80%" width="80%" />
 <br />
 <br />
 Click install<br/>
-<img src="https://imgur.com/ffEAy1E.png" height="80%" width="80%" />
+<img src="https://imgur.com/w280tvX.png" height="80%" width="80%" />
 <br />
 <br />
 Setup Installing<br/>
-<img src="https://imgur.com/pTFg5As.png" height="80%" width="80%" />
+<img src="https://imgur.com/wu3MgE5.png" height="80%" width="80%" />
 <br />
 <br />
-Installing Complete: Click finish<br/>
-<img src="https://imgur.com/ZzimULX.png" height="80%" width="80%" />
+Installation Complete: Click finish<br/>
+<img src="https://imgur.com/NO49ZCC.png" height="80%" width="80%" />
 <br />
 <br />
-Splunk Enterprise is launch with a default home page <br/>
-<img src="https://imgur.com/IMCTsBC.png" height="80%" width="80%" />
+Splunk Enterprise is launch with the default home page <br/>
+<img src="https://imgur.com/EflRwzk.png" height="80%" width="80%" />
 <br />
 <br />
-Clicked on Basic Network Scan: Opens a new scan page: Input name of scan: Input target Ip address(Windows10 host):Saved scan<br/>
-<img src="https://imgur.com/YImsxPd.png" height="80%" width="80%" />
+Navigating Splunk: Splunk bar includes: Messages(For system level messages),Settings(For configuration),Activity(To review job progress),Help and
+Find<br/>
+<img src="https://imgur.com/h7u1VT1.png" height="80%" width="80%" />
 <br />
 <br />
-Launched Scan : Scan Running <br/>
-<img src="https://imgur.com/VGNr6JT.png" height="80%" width="80%" />
+App Panel: Allows for ability to see installed apps on splunk instance<br/>
+<img src="https://imgur.com/IKo5OkY.png" height="80%" width="80%" />
 <br />
 <br />
-Scan Completed: Showing Scan Details :Color Coding severity of Vulnerability:<br/>
-<img src="https://imgur.com/zqYgTGP.png" height="80%" width="80%" />
+Explore Splunk: Gives quick links to add data,add new apps and access splunk documentation.<br/>
+<img src="https://imgur.com/1e10xFB.png" height="80%" width="80%" />
 <br />
 <br />
-Vulnerabilities Results:  <br/>
-<img src="https://imgur.com/xY9htKp.png" height="80%" width="80%" />
+Splunk Dashboard: No Dashboard are display by default.<br/>
+<img src="https://imgur.com/6DNwyhi.png" height="80%" width="80%" />
 <br />
 <br />
-SMB Vulnerability:  <br/>
-<img src="https://imgur.com/qFQYWWy.png" height="80%" width="80%" />
+Splunk Dashboard Continues: You can choose from a range of dashboard from the dropdown menu or by visiting the Dashboard listing page<br/>
+<img src="https://imgur.com/vrodWdX.png" height="80%" width="80%" />
 <br />
 <br />
-Enabled Remote Registry:  <br/>
-<img src="https://imgur.com/fey5FJi.png" height="80%" width="80%" />
+Adding or Ingesting Data into Splunk Instance: Click on Add data on the Explore Splunk home page and a new page like this appears<br/>
+<img src="https://imgur.com/XPF50bQ.png" height="80%" width="80%" />
 <br />
 <br />
-Change User Account Control Settings to "Never Notify:  <br/>
-<img src="https://imgur.com/v6snDMP.png" height="80%" width="80%" />
+Use upload option: A page like this will appear <br/>
+<img src="https://imgur.com/jJb4mk4.png" height="80%" width="80%" />
 <br />
 <br />
-Enabled Files and Printer Sharing:  <br/>
-<img src="https://imgur.com/fjhQ4FG.png" height="80%" width="80%" />
+Log Source: Select the file from your Computer: Click Next<br/>
+<img src="https://imgur.com/jJb4mk4.png" height="80%" width="80%" />
 <br />
 <br />
-Added LocalAccountTokenFilterPolicy to Registry:  <br/>
-<img src="https://imgur.com/xO2A7oo.png" height="80%" width="80%" />
+Select Source Type : json selected : Click Next<br/>
+<img src="https://imgur.com/0FMAyuK.png" height="80%" width="80%" />
 <br />
 <br />
-Set LocalAccountTokenFilterPolicy value to 1:  <br/>
-<img src="https://imgur.com/FhOBlXf.png" height="80%" width="80%" />
+Create an Index where the logs will be dumped: Click save<br/>
+<img src="https://imgur.com/T51Oaea.png" height="80%" width="80%" />
 <br />
 <br />
-Reconfigured my scan to perform a credential scan:  <br/>
-<img src="https://imgur.com/GxsX0Ze.png" height="80%" width="80%" />
+Create a hostname associated with the logs: Select the index in the dropdown and Click review <br/>
+<img src="https://imgur.com/tLFU5RS.png" height="80%" width="80%" />
 <br />
 <br />
-Input the credential and saved the scan:  <br/>
-<img src="https://imgur.com/bDhNch5.png" height="80%" width="80%" />
+Review Page: Click Submit and then Click Start Searching<br/>
+<img src="https://imgur.com/EVkwzdm.png" height="80%" width="80%" />
 <br />
 <br />
-Credential Scan Completed: Showing Scan Details :Color Coding severity of Vulnerability:  <br/>
-<img src="https://imgur.com/GeYZKuW.png" height="80%" width="80%" />
+Page Appears showing all the logs been ingested and  indexed into Splunk Instance <br/>
+<img src="https://imgur.com/ZAYo7gj.png" height="80%" width="80%" />
 <br />
 <br />
-Credential Scan Vulnerabilities Results :  <br/>
-<img src="https://imgur.com/wrSyBdB.png" height="80%" width="80%" />
-<br />
-<br />
-Mixed Result Details:Mixture of critical,High,and Info <br/>
-<img src="https://imgur.com/2XQxNc9.png" height="80%" width="80%" />
-<br />
-<br />
-Input the credential and saved the scan:  <br/>
-<img src="https://imgur.com/bDhNch5.png" height="80%" width="80%" />
-<br />
-<br />
-Input the credential and saved the scan:  <br/>
-<img src="https://imgur.com/bDhNch5.png" height="80%" width="80%" />
-<br />
-<br />
-Input the credential and saved the scan:  <br/>
-<img src="https://imgur.com/bDhNch5.png" height="80%" width="80%" />
-<br />
-<br />
-Input the credential and saved the scan:  <br/>
-<img src="https://imgur.com/bDhNch5.png" height="80%" width="80%" />
 
+Watch the Video Tutorial for further Analysis of the Logs<br/>
 
-
-
-
-
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 <!--
