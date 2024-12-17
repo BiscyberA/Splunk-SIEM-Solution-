@@ -2,7 +2,7 @@
 - [Collected,Ingested and Analyzed VPNlogs]
 
 <h2>Description</h2>
-In this lab we will cover basics of Splunk, the leading SIEM solution for collecting,Analyzing and Correlating machines and network logs in real-time.We will install,navigate and go through the various components of splunk and its functionality, and then ingest vpnlogs into splunk instance and try to analyze the logs. 
+In this lab we will cover basics of Splunk, the leading SIEM solution for collecting,Analyzing and Correlating logs from various log sources in real-time.We will install,navigate and go through the various components of splunk and its functionality, and then ingest logs into splunk instance and try to practice some commands on the logs. 
 <br />
 
 <h2>Tool Used</h2>
@@ -11,34 +11,34 @@ In this lab we will cover basics of Splunk, the leading SIEM solution for collec
 
 <h2>Environments Used </h2>
 
-- <b>VPN Logs</b>
-- <b>Windows 11</b> (21H2)
+- <b>Web Access Logs</b>
+- <b>Ubuntu </b> 
 
 <h2>Lab walk-through:</h2>
 
 <p align="center">
-Installing Splunk Enterprise on Windows 11 Host: Check the box to accept License Agreement and Click Next<br/>
-<img src="https://imgur.com/lhxJcE0.png" height="80%" width="80%"/>
+I installed splunk on Ubuntu and this is the home apge after the installation <br/>
+<img src="https://i.postimg.cc/gjq5s3qH/Screenshot-2024-12-16-131840.png"/>
 <br />
 <br />
-Create an Admin Account and Click Next<br/>
-<img src="https://imgur.com/wCXTRQC.png" height="80%" width="80%" />
+I navigated to the paage where I can add sample logs to splunk by clicking on upload <br/>
+<img src="https://i.postimg.cc/SxNsWr7V/Screenshot-2024-12-16-132222.png" />
 <br />
 <br />
-Click install<br/>
-<img src="https://imgur.com/w280tvX.png" height="80%" width="80%" />
+I uploaded the sample log and clicked next<br/>
+<img src="https://i.postimg.cc/dtJtYBXv/Screenshot-2024-12-16-140346.png" />
 <br />
 <br />
-Setup Installing<br/>
-<img src="https://imgur.com/wu3MgE5.png" height="80%" width="80%" />
+Here is the preview of the sample log and then clicked next<br/>
+<img src="https://i.postimg.cc/T3wdyPf4/Screenshot-2024-12-16-140522.png" />
 <br />
 <br />
-Installation Complete: Click finish<br/>
-<img src="https://imgur.com/NO49ZCC.png" height="80%" width="80%" />
+I ckicked on create index to create a new index<br/>
+<img src="" />
 <br />
 <br />
-Splunk Enterprise is launch with the default home page <br/>
-<img src="https://imgur.com/EflRwzk.png" height="80%" width="80%" />
+Index field filled out and saved  <br/>
+<img src="" />
 <br />
 <br />
 Navigating Splunk: Splunk bar includes: Messages(For system level messages),Settings(For configuration),Activity(To review job progress),Help and
