@@ -145,25 +145,8 @@ Created additional 3 dashboard and added it to the existing dashboard. Here is t
 <img src="https://i.postimg.cc/bv6DTPRP/Screenshot-2024-12-16-235253.png" />
 <br />
 <br />
- <br/>
-<img src="" />
-<br />
-<br />
- <br/>
-<img src="" />
-<br />
-<br />
- <br/>
-<img src="" />
-<br />
-<br />
-
-
-
-
-
-
-
+I arrange the dashboard to make it look more organize.Here is the result<br/>
+<img src="https://i.postimg.cc/rpYs4J8F/Screenshot-2024-12-16-235706.png" />
 
 <h2>Conclusion</h2>
 Again, this is just a basic overview of Splunk where I just uploaded a network centric data(VPN LOGS) into Splunk Instance and did a simple index searches.We can also have a Splunk forwader which is one of the component of Splunk install and configured on Host machine to capture host centric logs example(winEvent logs) and forwards it to the Splunk instance for investigation or Analysis(This is going to be my next project). We can also create table for specific Indexes or field value types to reduce search.
