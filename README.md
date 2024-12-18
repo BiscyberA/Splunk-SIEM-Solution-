@@ -1,11 +1,11 @@
 <h1>Splunk(SIEM Solution) Home Lab</h1>
-- [Collected,Ingested and Analyzed VPNlogs]
+- [Ingested and Query Web Access Logs With Various SPL Commands]
 
 <h2>Description</h2>
-In this lab we will cover basics of Splunk, the leading SIEM solution for collecting,Analyzing and Correlating logs from various log sources in real-time.We will install,navigate and go through the various components of splunk and its functionality, and then ingest logs into splunk instance and try to practice some commands on the logs. 
+In this lab we will cover basics of Splunk, the leading SIEM solution for collecting,Analyzing and Correlating logs from various log sources in real-time.We will install,navigate and go through the various components of splunk and its functionality, and then ingest logs into splunk instance and practice some commands on the logs. 
 <br />
 
-<h2>Tool Used</h2>
+<h2>Tools Used</h2>
 
 - <b>Splunk Enterprise</b> 
 
@@ -17,99 +17,153 @@ In this lab we will cover basics of Splunk, the leading SIEM solution for collec
 <h2>Lab walk-through:</h2>
 
 <p align="center">
-I installed splunk on Ubuntu and this is the home apge after the installation <br/>
-<img src="https://i.postimg.cc/gjq5s3qH/Screenshot-2024-12-16-131840.png"/>
+I installed splunk on Ubuntu and this is the home page after the installation <br/>
+<img src="https://i.postimg.cc/V5yg7m45/Screenshot-2024-12-16-131840.png"/>
 <br />
 <br />
-I navigated to the paage where I can add sample logs to splunk by clicking on upload <br/>
-<img src="https://i.postimg.cc/SxNsWr7V/Screenshot-2024-12-16-132222.png" />
+I navigated to the page where I can add sample logs to splunk by clicking on upload <br/>
+<img src="https://i.postimg.cc/13KxNj5D/Screenshot-2024-12-16-132222.png" />
 <br />
 <br />
-I uploaded the sample log and clicked next<br/>
-<img src="https://i.postimg.cc/dtJtYBXv/Screenshot-2024-12-16-140346.png" />
+I uploaded the sample log, I clicked next<br/>
+<img src="https://i.postimg.cc/5ym5mLHK/Screenshot-2024-12-16-140546.png" />
 <br />
 <br />
-Here is the preview of the sample log and then clicked next<br/>
-<img src="https://i.postimg.cc/T3wdyPf4/Screenshot-2024-12-16-140522.png" />
+Here is a preview of the sample log, I clicked next<br/>
+<img src="https://i.postimg.cc/7h19QjRV/Screenshot-2024-12-16-140640.png" />
 <br />
 <br />
 I ckicked on create index to create a new index<br/>
-<img src="" />
+<img src="https://i.postimg.cc/qRs2kyGB/Screenshot-2024-12-16-140706.png" />
 <br />
 <br />
 Index field filled out and saved  <br/>
+<img src="https://i.postimg.cc/PJ6px4vH/Screenshot-2024-12-16-140822.png" />
+<br />
+<br />
+Reviewed setup. I clicked submit to add data<br/>
+<img src="https://i.postimg.cc/kMwtfn1H/Screenshot-2024-12-16-140853.png" />
+<br />
+<br />
+Web access Log successfully uploaded<br/>
+<img src="https://i.postimg.cc/W1qFN0NR/Screenshot-2024-12-16-140906.png" />
+<br />
+<br />
+Queried the index to veiw ingested logs<br/>
+<img src="https://i.postimg.cc/W35b64N6/Screenshot-2024-12-16-141057.png" />
+<br />
+<br />
+Wrote a query to view http status code great than 200<br/>
+<img src="https://i.postimg.cc/BvMGRwrJ/Screenshot-2024-12-16-150457.png" />
+<br />
+<br />
+Wrote a query to view http status code great than or equal to 400<br/>
+<img src="https://i.postimg.cc/Jz80Lv2X/Screenshot-2024-12-16-150627.png" />
+<br />
+<br />
+Wrote a query to view http METHOD for GET or POST<br/>
+<img src="https://i.postimg.cc/m2DVSpwQ/Screenshot-2024-12-16-151526.png" />
+<br />
+<br />
+Wrote a query to view IPs that starts with 100<br/>
+<img src="https://i.postimg.cc/MHG0dXyW/Screenshot-2024-12-16-152015.png" />
+<br />
+<br />
+Wrote a query with the stats command to view a list of all the IPs in the logs<br/>
+<img src="https://i.postimg.cc/fbL0G1VK/Screenshot-2024-12-16-214545.png" />
+<br />
+<br />
+Wrote a query with the sort command to view a list of IPs with the top values in the logs<br/>
+<img src="https://i.postimg.cc/Bnv6bHJZ/Screenshot-2024-12-16-214733.png" />
+<br />
+<br />
+I used the head command to list the first 5 values<br/>
+<img src="https://i.postimg.cc/0j8v31Q5/Screenshot-2024-12-16-214847.png" />
+<br />
+<br />
+I used the table command to create a table for various fields<br/>
+<img src="https://i.postimg.cc/4Nykh5H0/Screenshot-2024-12-16-215159.png" />
+<br />
+<br />
+I used the dedup command to remove duplicate values of occurance<br/>
+<img src="https://i.postimg.cc/Wp9xjkYw/Screenshot-2024-12-16-215645.png" />
+<br />
+<br />
+I used the rename command to renamed the various column <br/>
+<img src="https://i.postimg.cc/Hx6vpqzk/Screenshot-2024-12-16-220346.png" />
+<br />
+<br />
+I used the timechart to view specific count of IP overtime<br/>
+<img src="https://i.postimg.cc/Jz8F55sm/Screenshot-2024-12-16-221917.png" />
+<br />
+<br />
+I used the search command to search event with strings Nmap<br/>
+<img src="https://i.postimg.cc/LswBNmxf/Screenshot-2024-12-16-222444.png" />
+<br />
+<br />
+I used the iplocation command to view the location various loactions of the IPs<br/>
+<img src="https://i.postimg.cc/7PM0T1rS/Screenshot-2024-12-16-223156.png" />
+<br />
+<br />
+I used geostatic command for geographic data that can be view on a map<br/>
+<img src="https://i.postimg.cc/VvSx2sw8/Screenshot-2024-12-16-223455.png" />
+<br />
+<br />
+Here is the map view<br/>
+<img src="https://i.postimg.cc/br3R0kWY/Screenshot-2024-12-16-223535.png" />
+<br />
+<br />
+ I save the result of geostats of IPs as report<br/>
+<img src="https://i.postimg.cc/x80RbtsF/Screenshot-2024-12-16-224423.png" />
+<br />
+<br />
+Confirmation of created report page<br/>
+<img src="https://i.postimg.cc/CLx33NFN/Screenshot-2024-12-16-224439.png" />
+<br />
+<br />
+The view page of the created report<br/>
+<img src="https://i.postimg.cc/90ZDChP6/Screenshot-2024-12-16-224514.png" />
+<br />
+<br />
+Created an Alert query to trigger when an alert identify a string<br/>
+<img src="https://i.postimg.cc/vZfsQtK6/Screenshot-2024-12-16-230527.png" />
+<br />
+<br />
+Confirmation of created alert page<br/>
+<img src="https://i.postimg.cc/9M83x8Ds/Screenshot-2024-12-16-230630.png" />
+<br />
+<br />
+Creating a dashbord based on a query result<br/>
+<img src="https://i.postimg.cc/CLWRPJDZ/Screenshot-2024-12-16-233137.png" />
+<br />
+<br />
+Dashboard created <br/>
+<img src="https://i.postimg.cc/90sQkF43/Screenshot-2024-12-16-233631.png" />
+<br />
+<br />
+Created additional 3 dashboard and added it to the existing dashboard. Here is the result<br/>
+<img src="https://i.postimg.cc/bv6DTPRP/Screenshot-2024-12-16-235253.png" />
+<br />
+<br />
+ <br/>
 <img src="" />
 <br />
 <br />
-Navigating Splunk: Splunk bar includes: Messages(For system level messages),Settings(For configuration),Activity(To review job progress),Help and
-Find(For Search)<br/>
-<img src="https://imgur.com/h7u1VT1.png" height="80%" width="80%" />
+ <br/>
+<img src="" />
 <br />
 <br />
-App Panel: Allows for ability to see installed apps on splunk instance with one of its default App:Search and Reporting<br/>
-<img src="https://imgur.com/IKo5OkY.png" height="80%" width="80%" />
+ <br/>
+<img src="" />
 <br />
 <br />
-Explore Splunk: Gives quick links to add data,add new apps and access splunk documentation.<br/>
-<img src="https://imgur.com/1e10xFB.png" height="80%" width="80%" />
-<br />
-<br />
-Splunk Dashboard: No Dashboard are display by default: You an create Dashboard<br/>
-<img src="https://imgur.com/6DNwyhi.png" height="80%" width="80%" />
-<br />
-<br />
-Splunk Dashboard Continues: You can choose from a range of dashboard from the dropdown menu or by visiting the Dashboard listing page<br/>
-<img src="https://imgur.com/vrodWdX.png" height="80%" width="80%" />
-<br />
-<br />
-Adding or Ingesting Data into Splunk Instance: Click on Add data on the Explore Splunk home page and a new page like this appears<br/>
-<img src="https://imgur.com/XPF50bQ.png" height="80%" width="80%" />
-<br />
-<br />
-There are few ways we send data to splunk such as Monitor, forwarder but we will use the upload option: A page like this will appear <br/>
-<img src="https://imgur.com/jJb4mk4.png" height="80%" width="80%" />
-<br />
-<br />
-This page allows you to select the Log Source(VPNlogs) stored on our computer:Select the file from your Computer, upload and Click Next<br/>
-<img src="https://imgur.com/jJb4mk4.png" height="80%" width="80%" />
-<br />
-<br />
-Select Source Type :This page shows how splunk sees my log source type.:Splunk identified it as json. Click Next<br/>
-<img src="https://imgur.com/0FMAyuK.png" height="80%" width="80%" />
-<br />
-<br />
-Create an Index where the logs will be dumped:Index takes the data uploaded and normalizes it into value pairs, data type and store as events.Click save<br/>
-<img src="https://imgur.com/T51Oaea.png" height="80%" width="80%" />
-<br />
-<br />
-Create a host field value with a name from which the events originated from.In this event is from VPN connection: Select the index created in the dropdown and Click review <br/>
-<img src="https://imgur.com/tLFU5RS.png" height="80%" width="80%" />
-<br />
-<br />
-Review Page shows the Input Type, File Name, Source Type and the created Host and Index.Click Submit and then Click Start Searching<br/>
-<img src="https://imgur.com/EVkwzdm.png" height="80%" width="80%" />
-<br />
-<br />
-Page Appears showing all the logs been ingested and  indexed(with field-values and data types) into Splunk Instance <br/>
-<img src="https://imgur.com/nlhqrf9.png" height="80%" width="80%" />
-<br />
-<br />
- Below shows number of events indexed and ingested into the splunk instnace: 5724 Events<br/>
-<img src="https://imgur.com/LXqZ2eW.png" height="80%" width="80%" />
-<br />
-<br />
-I index search on the Username Maleena to identify how many Log Events was captured: 120 Events <br/>
-<img src="https://imgur.com/khrQpZH.png" height="80%" width="80%" />
-<br />
-<br />
-I index search the Username associated with the IP Address 107.14.182.38: Smith has the IP <br/>
-<img src="https://imgur.com/JasJVty.png" height="80%" width="80%" />
-<br />
-<br />
-I index search the number of events originated from all countries except France: I index search France event and subtract it from total event. <br/>
-<img src="https://imgur.com/0W69cOX.png" height="80%" width="80%" />
-<br />
-<br />
+
+
+
+
+
+
+
 
 <h2>Conclusion</h2>
 Again, this is just a basic overview of Splunk where I just uploaded a network centric data(VPN LOGS) into Splunk Instance and did a simple index searches.We can also have a Splunk forwader which is one of the component of Splunk install and configured on Host machine to capture host centric logs example(winEvent logs) and forwards it to the Splunk instance for investigation or Analysis(This is going to be my next project). We can also create table for specific Indexes or field value types to reduce search.
